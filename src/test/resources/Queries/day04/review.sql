@@ -18,7 +18,7 @@ select * from EMPLOYEES
 where SALARY = (select min(SALARY) from (select distinct SALARY
                                          from EMPLOYEES
                                          order by SALARY desc )
-                                   where ROWNUM < 4)
+                                   where ROWNUM < 4);
 
 
 
@@ -50,12 +50,6 @@ where SALARY = (select max(SALARY) from (select distinct SALARY
     -- 3rd min query will return one value as 2400
     -- but we are looking for who has that salary
     -- 2 employees has same that's why it returns 2 result
-
-
-
-
-
-
 
 
 
