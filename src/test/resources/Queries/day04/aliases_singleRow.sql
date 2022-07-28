@@ -89,6 +89,27 @@ order by lower(substr(FIRST_NAME,-3)) asc,SALARY desc ;
 -- it will order them based on last 3 char and
 -- if there is same order based on last 3 it will order them based on salary desc order
 
+----------------------------------------------------------------------------------------------
+
+-- column aliases:
+select FIRST_NAME as "Given name" from EMPLOYEES;
+
+select  FIRST_NAME || ' ' || LAST_NAME as "Full Name" from EMPLOYEES;
+
+select concat(EMAIL, '@gmail.com') as "Email Address" from EMPLOYEES;
+
+-- table aliases:
+select * from EMPLOYEES, JOB_HISTORY;
+
+select EMPLOYEES.EMPLOYEE_ID, JOB_HISTORY.JOB_ID from EMPLOYEES, JOB_HISTORY;
+select e.EMPLOYEE_ID, j.JOB_ID from EMPLOYEES e, JOB_HISTORY j;
+
+
+
+
+
+
+
 
 
 

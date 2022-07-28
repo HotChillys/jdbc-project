@@ -13,3 +13,48 @@ select initials from EmployeesInfo;
 select Employees_salary from EmployeesInfo;
 
 drop view EmployeesInfo;
+
+---------------------------------------------------------------------------------------
+
+select * from EMPLOYEES;
+
+select last_NAME || ' ' || first_NAME as fullname from EMPLOYEES;
+
+create view EmployeeInfo as select LAST_NAME || ' ' || FIRST_NAME as fullname from EMPLOYEES;
+select * from EmployeeInfo;
+
+select last_NAME || ' ' || first_NAME as fullname,
+lower(email || '@gmail.com') as Email
+from EMPLOYEES;
+
+create or replace view EmployeeInfo as
+select last_NAME || ' ' || first_NAME as fullname,
+       lower(email || '@gmail.com') as Email
+from EMPLOYEES;
+
+select * from EmployeeInfo;
+
+drop view EmployeeInfo;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
