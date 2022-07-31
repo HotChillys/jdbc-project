@@ -67,3 +67,16 @@ where DEPARTMENT_ID is null ;
 
 select  * from EMPLOYEES
 where DEPARTMENT_ID is not null ;
+
+select FIRST_NAME from EMPLOYEES
+where length(FIRST_NAME) = 6;
+
+
+
+
+
+
+
+
+
+
